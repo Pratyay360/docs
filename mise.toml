@@ -1,0 +1,28 @@
+[tools]
+node = "latest"
+bun = "latest"
+"npm:surge" = "latest"
+
+
+[settings]
+experimental = true
+
+
+[tasks.build]
+run = '''
+bun install
+bun run build
+'''
+description = "Build the project"
+
+[tasks.preview]
+run = "bun run preview"
+description = "Preview the project"
+
+[tasks.deploy]
+run = '''
+SURGE=true mise run build
+surge deploy ./dist docs-pratyay.surge.sh
+mise run build
+'''
+description = "deploy to surge.sh + rebuild for GitHub Pages"

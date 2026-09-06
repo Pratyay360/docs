@@ -1,0 +1,33 @@
+---
+title: Welcome
+description: Blank Starlight starter — add your content here.
+template: splash
+hero:
+  tagline: Blank starter — ready for your docs.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Get Started
+      link: getting-started/
+      icon: right-arrow
+      variant: primary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid stagger>
+  <Card title="Edit this page" icon="pencil">
+    Edit `src/content/docs/index.mdx` to change this page.
+  </Card>
+  <Card title="Add pages" icon="add-document">
+    Create `.md` or `.mdx` files in `src/content/docs/` to add routes.
+  </Card>
+  <Card title="Configure sidebar" icon="setting">
+    Edit `sidebar` in `astro.config.mjs` to customize navigation.
+  </Card>
+  <Card title="Read the docs" icon="open-book">
+    Learn more in [the Starlight Docs](https://starlight.astro.build/).
+  </Card>
+</CardGrid>

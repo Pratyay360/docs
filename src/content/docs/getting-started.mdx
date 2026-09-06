@@ -1,0 +1,27 @@
+---
+title: Getting Started
+description: Start building your docs.
+sidebar:
+  order: 2
+---
+
+Add your content here.
+
+## Quick start
+
+1. Edit `src/content/docs/index.mdx`
+2. Add new files under `src/content/docs/` — they appear automatically via `autogenerate`
+3. Update `astro.config.mjs` to configure sidebar and plugins
+4. Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to test search (Pagefind index built on `bun run build`)
+
+## Autosidebar tip
+
+Any `.md`/`.mdx` in `guides/` or `reference/` is auto-listed. Control order with:
+
+```md
+---
+sidebar:
+  order: 1
+  label: Custom name
+---
+```
