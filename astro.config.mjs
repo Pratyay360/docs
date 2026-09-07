@@ -4,14 +4,11 @@ import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import starlightThemeExquisitus from "starlight-theme-exquisitus";
 
-// GitHub Pages project site is https://pratyay360.github.io/docs/ -> needs base "/docs/"
-// Surge is https://docs-pratyay.surge.sh -> needs base "/"
-// Default to GitHub Pages; set SURGE=true to build for Surge
 const isSurge = process.env.SURGE === "true";
 
 export default defineConfig({
 	site: isSurge
-		? "https://docs-pratyay.surge.sh"
+		? "https://docs.pratyay.qzz.io"
 		: "https://pratyay360.github.io",
 	base: isSurge ? "/" : "/docs/",
 	integrations: [
