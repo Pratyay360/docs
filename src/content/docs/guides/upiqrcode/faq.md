@@ -21,7 +21,9 @@ No. The demos load the `upiqrcode` WebAssembly module directly from the jsDelivr
 
 ## Why WebAssembly?
 
-The QR encoding logic is written in Rust and compiled to WebAssembly. This gives you near-native performance, a tiny dependency tree, and the same output across every platform — all without any server-side processing.
+The QR encoding logic is written in Rust and compiled to WebAssembly. This gives 
+you near-native performance, a tiny dependency tree, and the same output across
+every platform — all without any server-side processing.
 
 ## Can I set a custom amount?
 

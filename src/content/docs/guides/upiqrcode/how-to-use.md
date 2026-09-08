@@ -1,8 +1,7 @@
 ---
 title: "How to Use"
 description: "Step-by-step guide to generating UPI QR codes with Dynamic UPI."
-sidebar:
-  order: 2
+
 ---
 
 # How to Use
