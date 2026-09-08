@@ -27,6 +27,16 @@ jobs:
     container:
       image: ghcr.io/jdx/mise:latest
     steps:
+      - name: Cache
+        uses: actions/cache@main
+        with:
+          path: |
+            ~/.cache/mise
+            ~/.local/share/mise
+          key: mise-${{ runner.os }}
+          restore-keys: |
+            mise-${{ runner.os }}
+
       - name: checkout
         uses: actions/checkout@main
       - run: |
