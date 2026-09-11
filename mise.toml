@@ -1,6 +1,7 @@
 [tools]
 node = "latest"
 bun = "latest"
+"npm:surge" = "latest"
 
 
 [settings]
