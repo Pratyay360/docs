@@ -5,8 +5,7 @@ import { defineConfig } from "astro/config";
 import starlightThemeExquisitus from "starlight-theme-exquisitus";
 
 export default defineConfig({
-	site: "https://pratyay360.github.io",
-	base: "/docs",
+	site: "https://docs.pratyay.qzz.io",
 	integrations: [
 		starlight({
 			title: "Docs (managed with lightcms)",
@@ -38,6 +37,13 @@ export default defineConfig({
 					attrs: {
 						name: "google-site-verification",
 						content: "Va5ujtlU8FJUGHM84xxJvdFwqT4ocbM-Wpjnl3vXsBw",
+          },
+				},
+				{
+					tag: "meta",
+					attrs: {
+						name: "msvalidate.01",
+						content: "C348576BB92261CC55029F04F308DB94",
 					},
 				},
 				{

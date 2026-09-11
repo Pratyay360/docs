@@ -21,5 +21,6 @@ description = "Preview the project"
 [tasks.deploy]
 run = '''
 mise run build
+surge dist/ publish docs.pratyay.qzz.io
 '''
 description = "GitHub Pages"

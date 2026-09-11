@@ -43,12 +43,15 @@ jobs:
           mise trust
           mise deps
           mise run deploy
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_CLI }}
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@main
-        with:
-          path: ./dist
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@main
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@main
+      #   with:
+      #     path: ./dist
+
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@main
