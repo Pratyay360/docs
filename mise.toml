@@ -1,7 +1,6 @@
 [tools]
 node = "latest"
 bun = "latest"
-"npm:surge" = "latest"
 
 
 [settings]
@@ -21,8 +20,6 @@ description = "Preview the project"
 
 [tasks.deploy]
 run = '''
-SURGE=true mise run build
-surge deploy ./dist docs.pratyay.qzz.io
 mise run build
 '''
-description = "deploy to surge.sh + rebuild for GitHub Pages"
+description = "GitHub Pages"

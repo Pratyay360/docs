@@ -43,8 +43,6 @@ jobs:
           mise trust
           mise deps
           mise run deploy
-        env:
-          SURGE_TOKEN: ${{ secrets.SURGE_CLI }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@main

@@ -15,7 +15,7 @@ deployment URL, for example [https://xyz.vercel.app](https://xyz.vercel.app).
 
 Set the webhook URL to:
 
-```url
+```text
 https://xyz.vercel.app/api/github/webhooks
 ```
 
