@@ -12,42 +12,45 @@ tags:
 isCJKLanguage: false
 headless: false
 ---
-Introducing [Newsy](https://newsy.surge.sh), a newsletter platform powered entirely by GitHub.
+# Newsy
 
-Inspired by tools like Utterances, Giscus, Gitalk which reimagined commenting in blogs.
+Introducing [**Newsy**](https://newsy.surge.sh), a newsletter platform powered entirely by GitHub.
 
-Newsy tries to mimic the same GitHub driven approach but in newsletters.
+Newsy is heavily inspired by tools like [Utterances](https://utteranc.es), [Giscus](https://giscus.app), and [Gitalk](https://gitalk.github.io), which reimagined commenting for static sites using GitHub Issues. Newsy takes the same GitHub-driven approach and brings it to newsletters: instead of relying on external services or maintaining a separate mailing list, your newsletter lives right alongside your code in your GitHub repository.
 
-1. No mailing-list management.
-2. No expensive email APIs.
-3. No newsletter as a service subscription.
-4. No tension of deliver ability.
-5. No template builder to wrestle with.
+New here? Read the [Getting Started](getstarted.html) guide.
+
+---
+
+## Why GitHub?
+
+1. **No mailing list management** — Subscribers and updates are tracked via GitHub.
+2. **No expensive email APIs** — Eliminate costly third-party newsletter subscriptions.
+3. **No deliverability headaches** — Avoid complex SMTP setups and spam filters.
+4. **No database security concerns** — Leverage GitHub's authentication and security.
+5. **No rigid template builders** — Write purely in Markdown or HTML.
 
 **You just write. GitHub handles the rest.**
 
-Newsy is built around a simple idea, publishing should be democratized for any one and everyone.
+Publishing should be accessible to everyone. You shouldn't need to pay for a SaaS platform or spend hours wrestling with email infrastructure just to share updates with your readers.
 
-For many people, blogging is not a hobby yet because of some roadblocks. One shouldn't need to pay for a Sass platform or
-
-Spend hours managing subscribers and email infrastructure just to send updates to people who want to follow your writing.
-
-Newsletters are a huge part of blogging, so Newsy aims to make them just as approachable.
+---
 
 ## Technical Specifications
 
-Written in **Go**, Newsy is lightweight, simple to deploy, and designed to run virtually for free using **server less functions / Lambda-compatible functions**. Deploy it once, configure it, and **just forget about it**. Your content lives where you already work. Your audience gets the newsletter. GitHub provides the infrastructure. **Newsy is newsletter infrastructure for people who just want to write and let someone handle the rest (for free).**
+Written in **Go**, Newsy is lightweight, simple to deploy, and designed to run virtually for free using **serverless functions / Lambda-compatible runtimes**. Deploy it once, configure it, and let it run.
 
-This guide walks you through running Newsy and connecting it to your repositories.
+- **Runs locally** for development and testing.
+- **Deploys serverless** (e.g., Vercel, AWS Lambda) for production.
+- **TinyGo / WebAssembly support**: Host on any serverless runtime—even JavaScript/TypeScript-only platforms—by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org).
 
-There are two methods:
+A video walkthrough of the local setup is available in the [video guide](/video.html).
 
-- **Run locally** for development
-- **Deploy to a server less platform** (e.g., Vercel) for production
-
-A video walkthrough of the local setup is available in the [greenfield setup guide](/video.html).
+---
 
 ## Self-Host Your Bot
+
+Follow these steps to run Newsy and connect it to your GitHub repositories.
 
 ### 1. Clone the Repository
 
@@ -58,7 +61,7 @@ cd newsy
 
 ### 2. Set Up the Environment
 
-I have used [mise](https://mise.jdx.dev) to keep the development environment consistent and easy to manage:
+We use [mise](https://mise.jdx.dev) to keep the development environment consistent and easy to manage:
 
 ```bash
 mise deps
@@ -76,13 +79,13 @@ go build
 ### 4. Configure the GitHub App
 
 1. Open [http://localhost:3000](http://localhost:3000) in your browser.
-2. If you encounter issues exposing localhost, use a tunneling service such as [ngrok](https://ngrok.com), [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/), or SSH tunneling via [localhost.run](http://localhost.run/):
+2. If you need to expose your local server, use a tunneling service such as [ngrok](https://ngrok.com), [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/), or SSH tunneling via [localhost.run](http://localhost.run/):
 
 ```bash
 ssh -R 80:localhost:3000 localhost.run
 ```
 
-3. Open your tunnel URL (e.g., `https://xyz.localhost.run`) in your browser. It should look like this:
+3. Open your tunnel URL (e.g., `https://xyz.localhost.run`) in your browser:
 
 ![Webhook configuration](https://s6.imgcdn.dev/YgEOzv.png)
 
@@ -104,7 +107,7 @@ DATABASE_URL=""
 > \[!IMPORTANT\]
 > Install the GitHub App on **specific repositories only**, rather than on "All repositories".
 
-Each instance of Newsy can be shared by multiple users.
+Each instance of Newsy can be shared across multiple repositories or users.
 
 > \[!NOTE\]
 > By default, Newsy only triggers comments and issues upon the creation of new content files (`.html`, `.md`, `.mdx`, etc.), rather than on subsequent edits.
@@ -125,23 +128,23 @@ You can test Newsy directly using the hosted version:
 
 ![Deploy with Vercel](https://vercel.com/button)
 
-Once deployed, update your GitHub App's URLs from `*.localhost.run` to your production domain: `https://<your-app>.vercel.app`.
+Once deployed, update your GitHub App's Webhook URL from `*.localhost.run` to your production domain: `https://<your-app>.vercel.app`.
 
 See the [Vercel setup guide](vercel-setup-guide.html) for detailed step-by-step instructions.
 
 > \[!WARNING\]
-> Only use the deploy button if you already have a configured GitHub App and have its credentials ready. Otherwise, follow the [Greenfield Deployment](#greenfield-deployment-self-host-your-bot) steps first to create one.
+> Only use the deploy button if you already have a configured GitHub App and have its credentials ready. Otherwise, follow the [Self-Host Your Bot](#self-host-your-bot) steps first to create one.
 
 ---
 
 ## Operating Costs &amp; Resource Usage
 
-Vercel and many other cloud providers offer generous free tiers for server less workloads. You can also host Newsy on any server less runtime even platforms limited to JavaScript/Type Script—by compiling the Go binary to Web Assembly with [TinyGo](https://tinygo.org).
+Vercel and many other cloud providers offer generous free tiers for serverless workloads. You can also host Newsy on serverless runtimes limited to JavaScript/TypeScript by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org).
 
 Because it is a compiled Go binary:
 
 - **No external runtime dependencies** are required once built.
-- **Low memory footprint**, comfortably staying well within server less memory and execution limits.
+- **Low memory footprint**, comfortably staying well within serverless memory and execution limits.
 
 ---
 
@@ -155,7 +158,7 @@ Subscribe to see Newsy in action:
 
 ## Generate Your Subscription Button
 
-Generate an embed able subscription button for your account at [**newsy.surge.sh**](https://newsy.surge.sh/).
+Generate an embeddable subscription button for your account at [**newsy.surge.sh**](https://newsy.surge.sh/).
 
 You can customize and style the button using [Primer CSS](https://cdnjs.com/libraries/Primer).
 
