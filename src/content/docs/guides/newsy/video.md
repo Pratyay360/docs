@@ -1,17 +1,25 @@
 ---
-id: sFTY-YhO1OI
 title: Video Walkthrough
 description: A video guide to the greenfield (local) setup.
-author: Pratyay360
-visibility: "public"
-created: 2026-08-22T17:42:30+00:00
+date: '2026-09-12T01:07:00Z'
+draft: false
+weight: 0
+tags:
+  - video
+  - youtube
+  - newsy
+  - newsletter
+isCJKLanguage: false
+headless: false
 ---
+Prefer to learn by watching? 
 
-Prefer to learn by watching? This screencast covers the [greenfield](getstarted.html)
-setup from cloning the repo to running the bot.
+## New Method with Multitenancy Support
 
-[![YouTube walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)
+![newsy](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)
 
-[<img title="" src="https://vercel.com/button" alt="Deploy with Vercel" width="186">](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPratyay360%2Fnewsy)
 
-For the written steps, see the [Getting Started](getstarted.html) guide.
+
+This walkthrough covers the complete setup process, from cloning the repository to launching the bot. (Please disregard the previous video).
+
+![YouTube walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)
