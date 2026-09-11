@@ -1,33 +1,46 @@
 ---
-id: d6uExHe1NUk
 title: getting started
 description: Getting started with Newsy
-author: Pratyay360
-visibility: "public"
-created: 2026-08-22T17:45:42+00:00
+date: '2026-12-01T00:28:00Z'
+draft: false
+weight: 0
+tags:
+  - newsy
+  - newsletter
+  - modern solution
+  - free newsletter
+isCJKLanguage: false
+headless: false
+---
+This guide walks you through running Newsy and connecting it to your repositories.
+
+There are two methods:
+
+- **Run locally** for development
+- **Deploy to a server less platform** (e.g., Vercel) for production
+
+A video walkthrough of the local setup is available in the [greenfield setup guide](/video.html).
+
 ---
 
-This guide walks you through running Newsy and wiring it up to your repositories. 
-There are two methods:
-  - Run it locally for development
-  - Deploy it to a serverless platform like Vercel for production
+## Greenfield Deployment: Self-Host Your Bot
 
-A video version of the local setup is available in the [greenfield setup guide](/video.html).
-
-## Greenfield deployment
-
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
-git clone git@github.com/pratyay360/newsy.git
+git clone git@github.com:pratyay360/newsy.git
+cd newsy
 ```
 
-We use [mise](https://mise.jdx.dev) to keep the development 
-environment consistent and easy to manage:
+### 2. Set Up the Environment
+
+I have used [mise](https://mise.jdx.dev) to keep the development environment consistent and easy to manage:
 
 ```bash
 mise deps
 ```
+
+### 3. Build and Run
 
 Build and run the Go binary:
 
@@ -36,100 +49,95 @@ go build
 ./newsy
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Copy that URL into the 
-**Webhook URL** field when you create the GitHub App (give it a name and continue).
+### 4. Configure the GitHub App
 
-If you hit errors because of local host related issues kindly expose it with a 
-tunneling service such as [ngrok](https://ngrok.com),
-[cf-tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/),
-[zrok2](https://zrok.io), or simply use ssh with
-[localhost.run](http://localhost.run/) 
-if not interested in downloading a separate cli tool.
-
-For example:
+1. Open [http://localhost:3000](http://localhost:3000) in your browser.
+2. If you encounter issues exposing localhost, use a tunneling service such as [ngrok](https://ngrok.com), [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/), or SSH tunneling via [localhost.run](http://localhost.run/):
 
 ```bash
 ssh -R 80:localhost:3000 localhost.run
 ```
 
-Open the url [tunnel url](https://xyz.localhost.run) in your browser.
-it should look something like this: if not then watch my [video guide](/video.html)
-or try with a different tunneling service.
+3. Open your tunnel URL (e.g., `https://xyz.localhost.run`) in your browser. It should look like this:
 
 ![Webhook configuration](https://s6.imgcdn.dev/YgEOzv.png)
 
-Create a app name(preferably something unique)
+*(If you run into issues, refer to the [video guide](/video.html) or try an alternative tunneling provider.)*
 
-Put the tunnel URL (for example `https://xyz.localhost.run`) into the webhook urlfield.
-If everything worked for you, a `.env` file will be created in your cwd. Keep it safe it contains your app's secrets.
+4. Choose an **App name** (preferably unique).
+5. Paste the tunnel URL into the **Webhook URL** field and submit.
+6. A `.env` file containing your app's secrets will be generated in your project root. Keep this file safe.
 
-The generated `.env` should look something like this:
+The generated `.env` should look like this:
 
 ```dotenv
 APP_ID=""
 WEBHOOK_SECRET=""
 PRIVATE_KEY=""
+DATABASE_URL=""
 ```
 
-**Important:** install the app on specific repositories only not on "all repositories".
+> \[!IMPORTANT\]
+> Install the GitHub App on **specific repositories only**, rather than on "All repositories".
 
-Add these two variables yourself, and make sure the bot is installed on both repositories:
+Each instance of Newsy can be shared by multiple users.
 
-```dotenv
-TRACK_REPO=""
-DEST_REPO=""
-```
+> \[!NOTE\]
+> By default, Newsy only triggers comments and issues upon the creation of new content files (`.html`, `.md`, `.mdx`, etc.), rather than on subsequent edits.
 
-```dotenv
-ISSUE_TITLE = "" | optional default: "announcement"
-ISSUE_LABEL = "" | optional default: "newsletter"
-```
+---
 
-- `TRACK_REPO` — the repository Newsy watches for content changes.
-- `DEST_REPO` — the repository where newsletter issues are created.
+## Try Newsy via the Hosted Instance
 
-You can set both to the same repository (that's what I have done in the video).
+You can test Newsy directly using the hosted version:
 
-![Repository selection](https://s6.imgcdn.dev/YgHyXO.png)
+👉 [**https://newsy.surge.sh/**](https://newsy.surge.sh/)
+
+![Newsy Demo](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)
+
+---
 
 ## Deploy on Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPratyay360%2Fnewsy)
+![Deploy with Vercel](https://vercel.com/button)
 
-Once deployed, update your GitHub App's URLs from `*.localhost.run` to your
-apps domain: `*.vercel.app`.
+Once deployed, update your GitHub App's URLs from `*.localhost.run` to your production domain: `https://<your-app>.vercel.app`.
 
-See the [Vercel setup guide](vercel-setup-guide.html) for the exact steps.
+See the [Vercel setup guide](vercel-setup-guide.html) for detailed step-by-step instructions.
 
-> Only use the deploy button if you already have a GitHub App and remember its credentials.
-Otherwise, follow the [Green field](#greenfield-deployment) steps first to create one.
+> \[!WARNING\]
+> Only use the deploy button if you already have a configured GitHub App and have its credentials ready. Otherwise, follow the [Greenfield Deployment](#greenfield-deployment-self-host-your-bot) steps first to create one.
 
-## Cost of running this
+---
 
-Vercel offers generous limits for serverless functions also there are many cloud
-providers offering serverless functions as a service, also you can run the bot on
-any cloud provider's serverless runtime — even on the ones that only support 
-JS/TS functions (shh, by compiling the Go code to Wasm with [TinyGo](https://tinygo.org)).
+## Operating Costs &amp; Resource Usage
 
-Because it's a compiled Go binary, there is no runtime dependencies once built, 
-and it's memory-efficient, as it's compiled machine code. You can comfortably stay
-within invocation memory and duration limits.
+Vercel and many other cloud providers offer generous free tiers for server less workloads. You can also host Newsy on any server less runtime even platforms limited to JavaScript/Type Script—by compiling the Go binary to Web Assembly with [TinyGo](https://tinygo.org).
 
-## Try my newsletter
+Because it is a compiled Go binary:
 
-Subscribe to my own newsletter to see it in action:
+- **No external runtime dependencies** are required once built.
+- **Low memory footprint**, comfortably staying well within server less memory and execution limits.
 
-<a href="https://github.com/Pratyay360/pratyay/issues/13" target="_blank" rel="noopener noreferrer" style="display:inline-block;font-family:-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,sans-serif;font-weight:600;line-height:1.25;text-align:center;text-decoration:none;cursor:pointer;padding:7px 16px;font-size:14px;border-radius:6px;background:#0969da;color:#ffffff;border:1px solid rgba(27, 31, 36, 0.15);box-shadow:none;transition:background .15s ease, transform .15s ease" >Subscribe on GitHub</a>
-## Generate your own button
+---
 
-Create a subscription button for your account at [https://newsy.surge.sh/](https://newsy.surge.sh/).
+## Subscribe to the Newsletter
 
-You can style and customize the button using [Primer CSS](https://cdnjs.com/libraries/Primer).
+Subscribe to see Newsy in action:
 
-> **Security tip:** after the bot publishes its first newsletter issue, lock the
-> conversation so no one else can post in it and exploit your newsletter.
+👉 [**Subscribe on GitHub**](https://github.com/Pratyay360/blogs_md/issues/1)
+
+---
+
+## Generate Your Subscription Button
+
+Generate an embed able subscription button for your account at [**newsy.surge.sh**](https://newsy.surge.sh/).
+
+You can customize and style the button using [Primer CSS](https://cdnjs.com/libraries/Primer).
+
+> \[!TIP\]
+> **Security tip:** After the bot publishes its first newsletter issue, lock the issue conversation to prevent unauthorized comments from triggering unintended behavior.
 
 ![Locking the conversation](https://s6.imgcdn.dev/YgXhaN.png)
 
-Refer to the [required permissions](list-of-all-permission.html) page while
-setting things up.
+For further details on permissions, refer to the [required permissions](list-of-all-permission.html) documentation.
