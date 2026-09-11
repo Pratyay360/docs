@@ -10,11 +10,14 @@ export default defineConfig({
 	site: isSurge
 		? "https://docs.pratyay.qzz.io"
 		: "https://pratyay360.github.io",
+
 	base: isSurge ? "/" : "/docs/",
+
 	integrations: [
 		starlight({
 			title: "Docs (managed with lightcms)",
 			description: "Docs With astro starlight",
+
 			social: [
 				{
 					icon: "github",
@@ -27,10 +30,43 @@ export default defineConfig({
 					href: "https://pratyay.qzz.io",
 				},
 			],
+
+			head: [
+				{
+					tag: "meta",
+					attrs: {
+						name: "author",
+						content: "PRATYAY MUSTAFI",
+					},
+				},
+				{
+					tag: "meta",
+					attrs: {
+						name: "google-site-verification",
+						content:
+							"Va5ujtlU8FJUGHM84xxJvdFwqT4ocbM-Wpjnl3vXsBw",
+					},
+				},
+				{
+					tag: "meta",
+					attrs: {
+						property: "og:type",
+						content: "website",
+					},
+				},
+			],
+
 			plugins: [starlightThemeExquisitus()],
+
 			pagefind: true,
-			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
+
+			tableOfContents: {
+				minHeadingLevel: 2,
+				maxHeadingLevel: 3,
+			},
+
 			pagination: true,
+
 			sidebar: [
 				{
 					label: "Start Here",
@@ -48,7 +84,12 @@ export default defineConfig({
 					label: "Reference",
 					collapsed: true,
 					items: [
-						{ autogenerate: { directory: "reference", collapsed: true } },
+						{
+							autogenerate: {
+								directory: "reference",
+								collapsed: true,
+							},
+						},
 					],
 				},
 			],
