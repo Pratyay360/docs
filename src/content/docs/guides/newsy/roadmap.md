@@ -8,7 +8,13 @@ isCJKLanguage: false
 headless: false
 ---
 In the future, i have some plans to add things like 
-~~db support which decreases the need for self-hosting.~~ ~~and sharing one instance with multiple users.~~
+~~db support which decreases the need for self-hosting.~~ 
+
+~~and sharing one instance with multiple users.~~
+
+
+
+
 Currently, I myself is using the hobby tier of Vercel which accounts for a limited
 number of function invocations per month so can't host for others.
 
