@@ -4,15 +4,11 @@ import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import starlightThemeExquisitus from "starlight-theme-exquisitus";
 
-const isSurge = process.env.SURGE === "true";
+// const isSurge = process.env.SURGE === "true";
 
 export default defineConfig({
-	site: isSurge
-		? "https://docs.pratyay.qzz.io"
-		: "https://pratyay360.github.io",
-
-	base: isSurge ? "/" : "/docs/",
-
+	site: "https://pratyay360.github.io",
+	base: "/docs/",
 	integrations: [
 		starlight({
 			title: "Docs (managed with lightcms)",
