@@ -42,13 +42,13 @@ Written in **Go**, Newsy is lightweight, simple to deploy, and designed to run v
 
 - **Runs locally** for development and testing.
 - **Deploys serverless** (e.g., Vercel, AWS Lambda) for production.
-- **TinyGo / WebAssembly support**: Host on any serverless runtime—even JavaScript/TypeScript-only platforms—by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org).
+- **WebAssembly support**: Host on any serverless runtime even on JavaScript/TypeScript-only platforms by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org).
 
 A video walkthrough of the local setup is available in the [video guide](/video.html).
 
 ---
 
-## Self-Host Your Bot
+## Self Host Your Bot
 
 Follow these steps to run Newsy and connect it to your GitHub repositories.
 
@@ -139,11 +139,10 @@ See the [Vercel setup guide](vercel-setup-guide.html) for detailed step-by-step 
 
 ## Operating Costs &amp; Resource Usage
 
-Vercel and many other cloud providers offer generous free tiers for serverless workloads. You can also host Newsy on serverless runtimes limited to JavaScript/TypeScript by compiling the Go binary to WebAssembly with [TinyGo](https://tinygo.org).
+Vercel and many other cloud providers offer generous free tiers for server less workloads. You can also host Newsy on server less runtimes limited to JavaScript/Type Script by compiling the Go binary to Web Assembly with [Tiny-go](https://tinygo.org).
 
 Because it is a compiled Go binary:
 
-- **No external runtime dependencies** are required once built.
 - **Low memory footprint**, comfortably staying well within serverless memory and execution limits.
 
 ---
@@ -158,7 +157,7 @@ Subscribe to see Newsy in action:
 
 ## Generate Your Subscription Button
 
-Generate an embeddable subscription button for your account at [**newsy.surge.sh**](https://newsy.surge.sh/).
+Generate an embedded subscription button for your account at [**newsy.surge.sh**](https://newsy.surge.sh/).
 
 You can customize and style the button using [Primer CSS](https://cdnjs.com/libraries/Primer).
 
