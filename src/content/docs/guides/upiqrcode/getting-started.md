@@ -24,12 +24,12 @@ Dynamic UPI lets anyone create a QR code that links directly to a UPI payment in
 
 Jump straight into an interactive demo below — each one showcases the same Rust-to-WASM `upiqrcode` library running inside a different rendering framework:
 
-- [React Demo](/react-demo) — React with hooks managing CDN-loaded WebAssembly
-- [Vue Demo](/vue-demo) — Vue 3 Composition API
-- [Svelte Demo](/svelte-demo) — Svelte reactive template
-- [Plain HTML Demo](/html-demo) — Vanilla JavaScript, no framework
+- [React Demo](https://dynamic-upi-qr.netlify.app/react) — React with hooks managing CDN-loaded WebAssembly
+- [Vue Demo](https://dynamic-upi-qr.netlify.app/vue) — Vue 3 Composition API
+- [Svelte Demo](https://dynamic-upi-qr.netlify.app/svelte) — Svelte reactive template
+- [Plain HTML Demo](https://dynamic-upi-qr.netlify.app/html) — Vanilla JavaScript, no framework
 
-Or visit the [Overview](/) for the full architecture showcase.
+Or visit the [Overview](https://dynamic-upi-qr.netlify.app) for the full architecture showcase.
 
 ## How It Works
 

@@ -61,7 +61,8 @@ cd newsy
 
 ### 2. Set Up the Environment
 
-We use [mise](https://mise.jdx.dev) to keep the development environment consistent and easy to manage:
+We use [mise](https://mise.jdx.dev) to keep the development environment
+consistent and easy to manage:
 
 ```bash
 mise deps
@@ -120,7 +121,7 @@ You can test Newsy directly using the hosted version:
 
 👉 [**https://newsy.surge.sh/**](https://newsy.surge.sh/)
 
-![Newsy Demo](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)
+![[Newsy Demo](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://youtu.be/3d1xLYkeVsA?si=1Z3wLYqQMd6FECkv)
 
 ---
 
@@ -129,8 +130,6 @@ You can test Newsy directly using the hosted version:
 ![Deploy with Vercel](https://vercel.com/button)
 
 Once deployed, update your GitHub App's Webhook URL from `*.localhost.run` to your production domain: `https://<your-app>.vercel.app`.
-
-See the [Vercel setup guide](vercel-setup-guide.html) for detailed step-by-step instructions.
 
 > \[!WARNING\]
 > Only use the deploy button if you already have a configured GitHub App and have its credentials ready. Otherwise, follow the [Self-Host Your Bot](#self-host-your-bot) steps first to create one.

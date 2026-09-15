@@ -34,7 +34,6 @@ The generated intent link follows the UPI deep-link spec:
 upi://pay?pa=payeeVPA&pn=payeeName&am=amount&cu=currency&tn=transactionNote
 ```
 
-
 | Parameter | Description              | Required |
 | --------- | ------------------------ | -------- |
 | `pa`      | Payee VPA (UPI ID)       | ✅        |
@@ -43,7 +42,6 @@ upi://pay?pa=payeeVPA&pn=payeeName&am=amount&cu=currency&tn=transactionNote
 | `cu`      | Currency (default INR)   | optional |
 | `tn`      | Transaction note         | optional |
 | `tr`      | Transaction reference ID | optional |
-
 
 ## QR Code
 

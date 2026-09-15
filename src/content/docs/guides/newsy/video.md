@@ -12,14 +12,13 @@ tags:
 isCJKLanguage: false
 headless: false
 ---
-Prefer to learn by watching? 
+Prefer to learn by watching?
 
 ## New Method with Multitenancy Support
 
-![newsy](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)
+[![newsy](https://img.youtube.com/vi/sfjo6ZVgC9w/hqdefault.jpg)](https://www.youtube.com/watch?v=sfjo6ZVgC9w)
 
+This walkthrough covers the complete setup process, from cloning the
+repository to launching the bot. (Please disregard the previous video).
 
-
-This walkthrough covers the complete setup process, from cloning the repository to launching the bot. (Please disregard the previous video).
-
-![YouTube walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)
+[![YouTube walkthrough](https://img.youtube.com/vi/RpSJAaluYkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=RpSJAaluYkw)

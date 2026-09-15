@@ -9,12 +9,12 @@ tags:
 isCJKLanguage: false
 headless: false
 ---
-[Upiqrcode](https://github.com/Pratyay360/upiqrcode)  is a wasm based qrcode generator 
-to generate qrcodes compatible with any upi app. 
+[Upiqrcode](https://github.com/Pratyay360/upiqrcode)  is a wasm based qrcode generator
+to generate qrcodes compatible with any upi app.
 
-It’s lightweight hackable and can be used with any of your tech stack even where 
-no node like runtime is present, 
-Through the [CDN version of the package](https://www.jsdelivr.com/package/npm/upiqrcode). 
-And if you want to read about how to use the library 
+It’s lightweight hackable and can be used with any of your tech stack even where
+no node like runtime is present,
+Through the [CDN version of the package](https://www.jsdelivr.com/package/npm/upiqrcode).
+And if you want to read about how to use the library
 then kindly [read the docs](https://dynamic-upi-qr.netlify.app/).  
 Have written about how to use that package with examples and interactive demos there in detail.
