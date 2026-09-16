@@ -29,7 +29,7 @@ One can say the newsy way is to use github as a platform to manage your
 newsletter. For more information, see
 [newsy](https://github.com/pratyay360/newsy)
 
-BTW, newsy observes the repo for newly created files of type .md .mdx and
+By the way, newsy observes the repo for newly created files of type .md .mdx and  
 .html and then it will send the content to the subscribers.
 
 kindly, check [newsy repo](https://github.com/pratyay360/newsy)
