@@ -1,13 +1,14 @@
 ---
-name: newsletter
-serial: 3
-date: 2026-07-26T17:50:34.820Z
+title: newsletter
+description: how to configure newsletter for my blog.
+date: '1111-11-11T11:11:00Z'
+draft: false
+weight: 0
 tags:
   - newsletter
-draft: false
-description: how to configure newsletter for my blog.
+isCJKLanguage: false
+headless: false
 ---
-
 # Newsletter
 
 To configure a newsletter for your blog, the traditional way was to:
