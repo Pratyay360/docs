@@ -1,20 +1,26 @@
 ---
 title: why light cms??
-serial: 1
+description: why yet another cms
+date: '2026-09-18T00:41:00Z'
+draft: false
+weight: 0
 tags:
   - cms
-description: why yet another cms
+  - why
+  - lightcms
+  - why lightcms
+isCJKLanguage: false
+headless: false
 ---
+So before introducing yet another cms …  
+Been trying several cms solutions  
+and all of them felt kind off missing something for writing and managing blogs/content.
 
-So before introducing yet another cms ..
-Been trying several cms solutions
-and all of them felt kindoff missing something for writing and managing blogs/content.
+only easy stuff i have had used is [front matter](https://frontmatter.codes) but visual studio code for writing blogs is too much for a simple thing.
 
-only easy stuff i have had used is [frontmatter](https://frontmatter.codes) but visual studio code for writting blogs is too much for a simple thing.
-
-Some road blockers for me were quality of wysiwyg editor. or the overall
-experience like. handling images content and organizing files. contents +
-(reaction + comment + newsletters) all using github repository.
+Some road blockers for me were quality of wysiwyg editor. or the overall  
+experience like. handling images content and organizing files. contents +  
+(reaction + comment + newsletters) all using GitHub repository.
 
 the main goal is to enable everyone to write and manage content
 all in one place. and with ultimate ease and delight.
