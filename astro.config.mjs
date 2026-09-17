@@ -10,6 +10,9 @@ export default defineConfig({
 		starlight({
 			title: "Docs (managed with lightcms)",
 			description: "Docs With astro starlight",
+			components: {
+				Footer: "./src/components/Footer.astro",
+			},
 
 			social: [
 				{
