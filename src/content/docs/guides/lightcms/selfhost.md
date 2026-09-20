@@ -129,26 +129,28 @@ permanent HTTPS URL.
 
 Any [chevereto](https://chevereto.com/) compatible instance you can use any instance, some free options are 
 
-1.  [https://imgcdn.dev/](https://imgcdn.dev/)
+1. [https://imgcdn.dev/](https://imgcdn.dev/)
 2. [https://shareimg.eu/](https://shareimg.eu/)
 3. [https://freeimage.host/](https://freeimage.host/)
 4. [https://imgbb.com/](https://imgbb.com/)
 
+```bash
+CDN_URL="https://examplecdn.dev/1/upload"
+CDN_KEY="" # api key  
+```
+
 ### 6. Configure email
 
-LightCMS sends email over SMTP. Set the `MAIL_*` variables using credentials
-from your email provider — [Nodemailer](https://nodemailer.com/message/)
-documents the available SMTP options. [Resend](https://resend.com) also works
-if your installation uses its SMTP or API workflow. If you don't have a domain
-then getting started with [zohomail](https://www.zoho.com/mail) is most
-straightforward.
+LightCMS sends emails via SMTP. To configure this, set the `MAIL_*` variables using credentials from your email provider. For a complete list of available SMTP options, please refer to the [Nodemailer documentation](https://nodemailer.com/message/).
+
+If you own a domain, [Resend](https://resend.com) is the easiest option to set up. Otherwise, [Zoho Mail](https://www.zoho.com/mail) is the most straightforward way to get started.
 
 ### 7. Run and deploy
 
-run dev server and get started with your very own lightcms instance
+Start your own LightCMS instance by running the development server:
 
 ```bash
 npm run dev
 ```
 
-Then deploy to any platform using a [SvelteKit adapter like netlify vercel or cloudflare](https://svelte.dev/docs/kit/adapters).
+When you're ready, you can deploy to any platform using a [SvelteKit adapter, such as Netlify, Vercel, or Cloudflare](https://svelte.dev/docs/kit/adapters).
