@@ -11,7 +11,8 @@ tags:
 isCJKLanguage: false
 headless: false
 ---
-# UPI QR Format
+
+## UPI QR Format
 
 This page explains the structure behind the generated QR code and intent link.
 
@@ -45,4 +46,5 @@ upi://pay?pa=payeeVPA&pn=payeeName&am=amount&cu=currency&tn=transactionNote
 
 ## QR Code
 
-The QR encodes a `upi://pay` URI. When scanned by a UPI app, the app parses the URI, pre-fills the payment fields, and prompts the user to confirm.
+The QR encodes a `upi://pay` URI. When scanned by a UPI app, the app parses the 
+URI, pre-fills the payment fields, and prompts the user to confirm.

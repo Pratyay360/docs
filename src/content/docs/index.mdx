@@ -1,33 +1,28 @@
 ---
-title: Welcome
-description: Blank Starlight starter — add your content here.
+title: Docs
+description: Setup guides, configuration recipes and reference for LightCMS, Newsy, upiqrcode and the rest of the self-hostable toolbelt.
 template: splash
 hero:
-  tagline: Blank starter — ready for your docs.
-  image:
-    file: ../../assets/houston.webp
+  tagline: Setup guides, recipes and reference for the tools that run lightcms.me — no fluff, just the bits you need to ship.
   actions:
     - text: Get Started
       link: getting-started/
       icon: right-arrow
       variant: primary
+    - text: View on GitHub
+      link: https://github.com/Pratyay360/docs
+      icon: github
+      variant: secondary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## How this site works
 
-<CardGrid stagger>
-  <Card title="Edit this page" icon="pencil">
-    Edit `src/content/docs/index.mdx` to change this page.
-  </Card>
-  <Card title="Add pages" icon="add-document">
-    Create `.md` or `.mdx` files in `src/content/docs/` to add routes.
-  </Card>
-  <Card title="Configure sidebar" icon="setting">
-    Edit `sidebar` in `astro.config.mjs` to customize navigation.
-  </Card>
-  <Card title="Read the docs" icon="open-book">
-    Learn more in [the Starlight Docs](https://starlight.astro.build/).
-  </Card>
-</CardGrid>
+Everything here is written in Markdown and lives in
+[`Pratyay360/docs`](https://github.com/Pratyay360/docs) on GitHub. Pages are
+published with astro Starlight and served from [docs.lightcms.me](https://docs.lightcms.me).
+
+- Found a mistake? Use the **Edit** link at the bottom of any page.
+- Looking for something specific? Press <kbd>/</kbd> to search.
+- Prefer a quick start? Begin with [Getting Started](getting-started/).

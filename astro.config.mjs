@@ -1,11 +1,13 @@
 // @ts-check
 
 import starlight from "@astrojs/starlight";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightThemeExquisitus from "starlight-theme-exquisitus";
 
 export default defineConfig({
 	site: "https://docs.lightcms.me",
+
 	integrations: [
 		starlight({
 			title: "Docs (managed with lightcms)",
@@ -40,7 +42,7 @@ export default defineConfig({
 					attrs: {
 						name: "google-site-verification",
 						content: "Va5ujtlU8FJUGHM84xxJvdFwqT4ocbM-Wpjnl3vXsBw",
-          },
+					},
 				},
 				{
 					tag: "meta",
@@ -97,4 +99,8 @@ export default defineConfig({
 			],
 		}),
 	],
+
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });

@@ -3,6 +3,7 @@ node = "latest"
 bun = "latest"
 "npm:surge" = "latest"
 markdownlint-cli2 = "latest"
+biome = "latest"
 
 
 [settings]

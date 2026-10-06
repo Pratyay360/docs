@@ -4,6 +4,7 @@ import LastUpdated from 'virtual:starlight/components/LastUpdated';
 import Pagination from 'virtual:starlight/components/Pagination';
 import config from 'virtual:starlight/user-config';
 import { Icon } from '@astrojs/starlight/components';
+import Button from './Button.astro';
 ---
 
 <footer class="sl-flex">
@@ -12,7 +13,14 @@ import { Icon } from '@astrojs/starlight/components';
 		<LastUpdated />
 	</div>
 	<Pagination />
-
+	<Button
+		class="contact-cta"
+		variant="ghost"
+		href="https://app.youform.com/forms/moki0tve"
+		target="_blank"
+	>
+		Contact us
+	</Button>
 	<div class="carbon-badge-wrap">
 		<div id="wcb" class="carbonbadge"></div>
 	</div>
@@ -44,6 +52,10 @@ import { Icon } from '@astrojs/starlight/components';
 		}
 		.meta > :global(p:only-child) {
 			margin-inline-start: auto;
+		}
+
+		.contact-cta {
+			margin-block-start: 0.5rem;
 		}
 
 		.carbon-badge-wrap {

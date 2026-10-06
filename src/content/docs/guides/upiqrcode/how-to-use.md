@@ -36,12 +36,12 @@ Every demo uses the same `@1.5.5` CDN build — the only difference is the surro
 
 | Framework | Component              | Where to try     |
 | --------- | ---------------------- | ---------------- |
-| React     | `ReactUPIQRCode.tsx`   | `/react-demo`    |
-| Vue 3     | `VueUPIQRCode.vue`     | `/vue-demo`      |
-| Svelte    | `SvelteUPIQRCode.svelte` | `/svelte-demo` |
-| Plain HTML| `PlainHTMLUPIQRCode.astro` | `/html-demo`   |
+| React     | `ReactUPIQRCode.tsx`   | `https://dynamic-upi-qr.netlify.app/react-demo`    |
+| Vue 3     | `VueUPIQRCode.vue`     | `https://dynamic-upi-qr.netlify.app/vue-demo`      |
+| Svelte    | `SvelteUPIQRCode.svelte` | `https://dynamic-upi-qr.netlify.app/svelte-demo` |
+| Plain HTML| `PlainHTMLUPIQRCode.astro` | `https://dynamic-upi-qr.netlify.app/html-demo`   |
 
-## Install the Package (NPM)
+# Install the Package (NPM)
 
 If you want to use the library in your own project:
 
