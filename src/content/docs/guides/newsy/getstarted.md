@@ -14,11 +14,11 @@ headless: false
 ---
 # Newsy
 
-Introducing [**Newsy**](https://newsy.surge.sh), a newsletter platform powered entirely by GitHub.
+Introducing [**Newsy**](https://newsy.lightcms.me), a newsletter platform powered entirely by GitHub.
 
 Newsy is heavily inspired by tools like [Utterances](https://utteranc.es), [Giscus](https://giscus.app), and [Gitalk](https://gitalk.github.io), which reimagined commenting for static sites using GitHub Issues. Newsy takes the same GitHub-driven approach and brings it to newsletters: instead of relying on external services or maintaining a separate mailing list, your newsletter lives right alongside your code in your GitHub repository.
 
-New here? Read the [Getting Started](getstarted.html) guide.
+New here? Read the [Getting Started](newsy/getstarted.html) guide.
 
 ---
 
